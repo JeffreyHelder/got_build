@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Traversal</title>
+<link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<body>
+    <main>
+
+    <section id="imageContainer">
+    	<div id="houseImages" style="right: 0;"> <!-- add in all of the images to make a scrolling "banner" -->
+    		<img src="images/stark.jpg"/>
+    		<img src="images/baratheon.jpg"/>
+    		<img src="images/lannister.jpg"/>
+    		<img src="images/tully.jpg"/>
+    		<img src="images/greyjoy.jpg"/>
+    		<img src="images/arryn.jpg"/>
+        <img src="images/frey.jpg"/>
+    		<img src="images/targaryen.jpg"/>
+        <img src="images/tyrell.jpg"/>
+      </div>
+    </section>
+
+    <nav id="bottomNav">
+    	<ul id="navList">
+        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+            <li><div class="sigilContainer stark" data-offset="0"></div></li>
+            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
+            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
+            <li><div class="sigilContainer tully" data-offset="3"></div></li>
+            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
+            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+            <li><div class="sigilContainer frey" data-offset="6"></div></li>
+            <li><div class="sigilContainer targaryen" data-offset="7"></div></li>
+            <li><div class="sigilContainer tyrell" data-offset="8"></div></li>
+        </ul>
+    </nav>
+
+    <h1 id="house-name">choose a house to learn more</h1><!-- replace this with the house name -->
+
+    <p class="house-info"></p><!-- replace this with house details -->
+
+    <section class="lightbox">
+      <a href="#" class="close-lightbox">X</a>
+      <div class="video-box">
+        <video preload="metadata" class="house-video" src="" type="video/mp4"></video>
+        <div class="video-controls">
+          <button class="play-pause"><img src="images/pause.png" alt="play/pause icon" id="plause"></button>
+          <input type="range" id="progress-bar" value="0">
+          <button class="mute"><img src="images/volume.png" alt="volume icon" id="volume"></button>
+          <input type="range" id="vol" min="0" max="10" step="1" value="10">
+          <button class="full"><img src="images/fullscreen.png" alt="fullscreen icon" id="fullscreen"></button>
+        </div>
+      </div>
+    </section>
+
+</main>  <!--end mainContainer-->
+
+<script src="js/GOT_master.js"></script>
+</body>
+</html>
